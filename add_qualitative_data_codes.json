@@ -1,0 +1,63 @@
+{
+    "name": "add_qualitative_data_codes",
+    "description": "The function takes all the qualitative data codes (true or false) and adds them to a file for code analysis.",
+    "strict": true,
+    "parameters": {
+      "type": "object",
+      "required": [
+        "codes"
+      ],
+      "properties": {
+        "codes": {
+          "type": "object",
+          "description": "A dictionary of themes/codes with booleans representing their presence in the input text",
+          "properties": {
+            "grammar_and_fluency": {
+              "type": "boolean",
+              "description": "Indicates if grammar and fluency is present"
+            },
+            "ideation": {
+              "type": "boolean",
+              "description": "Indicates if ideation is present"
+            },
+            "nothing": {
+              "type": "boolean",
+              "description": "Indicates if nothing is present"
+            },
+            "paraphrasing": {
+              "type": "boolean",
+              "description": "Indicates if paraphrasing is present"
+            },
+            "proofreading": {
+              "type": "boolean",
+              "description": "Indicates if proofreading is present"
+            },
+            "research": {
+              "type": "boolean",
+              "description": "Indicates if research is present"
+            },
+            "styling": {
+              "type": "boolean",
+              "description": "Indicates if styling is present"
+            },
+            "summarisation": {
+              "type": "boolean",
+              "description": "Indicates if summarisation is present"
+            }
+          },
+          "additionalProperties": false,
+          "required": [
+            "grammar_and_fluency",
+            "ideation",
+            "nothing",
+            "paraphrasing",
+            "proofreading",
+            "research",
+            "styling",
+            "summarisation"
+          ]
+        }
+      },
+      "additionalProperties": false
+    }
+  }

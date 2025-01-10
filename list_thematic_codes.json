@@ -1,0 +1,27 @@
+{
+    "name": "list_thematic_codes",
+    "description": "Generates a list of thematic codes for categorizing data",
+    "strict": true,
+    "parameters": {
+      "type": "object",
+      "required": [
+        "codes",
+        "description"
+      ],
+      "properties": {
+        "codes": {
+          "type": "array",
+          "description": "List of thematic codes",
+          "items": {
+            "type": "string",
+            "description": "Thematic code"
+          }
+        },
+        "description": {
+          "type": "string",
+          "description": "A brief description of the thematic codes"
+        }
+      },
+      "additionalProperties": false
+    }
+  }
