@@ -6,7 +6,7 @@ COLUMN_CODES_SURVEY_2 = ["2298314"]
 COLUMN_CODES_SURVEY_3 = ["2298340"]
 COLUMNS_OF_INTEREST = ["2275844", "2298314", "2298340"]
 
-def ingest_survey_data():
+def ingest_survey_data() -> pd.DataFrame:
     survey_data = retrieve_concatenated_survey_data()
     
     survey_data = survey_data.loc[:, survey_data.columns[survey_data.columns.str.contains('|'.join(COLUMNS_OF_INTEREST))]]
@@ -25,3 +25,5 @@ def ingest_survey_data_by_survey_code(survey_code):
     # Assuming survey files exist and are properly structured
     data = pd.read_csv(f"survey_data/survey_{survey_code}_cleaned.csv")
     return data
+
+ingest_survey_data().to_csv('cleaned_survey_data.csv')
