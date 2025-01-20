@@ -4,7 +4,8 @@ from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.chrome.options import Options
 from webdriver_manager.chrome import ChromeDriverManager
 from sqlalchemy.orm import sessionmaker
-from data.db import engine, Thesis
+from data.db import engine
+from data.models.Thesis import Thesis
 import time
 
 # Configure Selenium WebDriver
@@ -21,7 +22,7 @@ def create_driver():
 # Scrape text from a given URL
 def scrape_text(driver, url):
     driver.get(url)
-    time.sleep(6)  # Allow time for the page to load
+    time.sleep(10)  # Allow time for the page to load
     try:
         text_element = driver.find_element(By.ID, "description")
         return text_element.text.strip()
@@ -46,11 +47,13 @@ def update_thesis_texts(batch_size=100):
             for thesis in theses:
                 print(f"Scraping text for: {thesis.link}")
                 text = scrape_text(driver, thesis.link)
-                time.sleep(6) # Add a delay to avoid being blocked
+                time.sleep(10) # Add a delay to avoid being blocked
                 if text:
                     thesis.text = text
                     session.commit()
                     print(f"Updated text for: {thesis.link}")
+                else:
+                    time.sleep(120)  # Add a delay to avoid being blocked
     finally:
         driver.quit()
         session.close()
