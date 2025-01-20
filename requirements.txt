@@ -1,0 +1,6 @@
+yfinance
+requests
+urllib3
+selenium
+sqlalchemy
+json
