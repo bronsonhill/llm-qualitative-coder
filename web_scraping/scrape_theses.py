@@ -8,6 +8,8 @@ from data.db import engine
 from data.models.Thesis import Thesis
 import time
 
+FAILURE_THRESHOLD = 2  # Maximum number of consecutive failures allowed
+
 # Configure Selenium WebDriver
 def create_driver():
     options = Options()
@@ -22,7 +24,7 @@ def create_driver():
 # Scrape text from a given URL
 def scrape_text(driver, url):
     driver.get(url)
-    time.sleep(10)  # Allow time for the page to load
+    time.sleep(20)  # Allow time for the page to load
     try:
         text_element = driver.find_element(By.ID, "description")
         return text_element.text.strip()
@@ -37,6 +39,7 @@ def update_thesis_texts(batch_size=100):
     session = Session()
 
     driver = create_driver()
+    consecutive_failures = 0  # Counter for consecutive failures
     try:
         while True:
             # Query a batch of records with null text field
@@ -47,13 +50,21 @@ def update_thesis_texts(batch_size=100):
             for thesis in theses:
                 print(f"Scraping text for: {thesis.link}")
                 text = scrape_text(driver, thesis.link)
-                time.sleep(10) # Add a delay to avoid being blocked
+                
                 if text:
                     thesis.text = text
                     session.commit()
                     print(f"Updated text for: {thesis.link}")
+                    consecutive_failures = 0  # Reset counter on success
                 else:
-                    time.sleep(120)  # Add a delay to avoid being blocked
+                    consecutive_failures += 1
+                    if consecutive_failures > FAILURE_THRESHOLD:
+                        print("Too many consecutive failures, terminating script.")
+                        time.sleep(600)  # Add a delay to avoid being blocked
+                        return
+                    time.sleep(360)  # Add a delay to avoid being blocked
+                
+                time.sleep(20) # Add a delay to avoid being blocked
     finally:
         driver.quit()
         session.close()
