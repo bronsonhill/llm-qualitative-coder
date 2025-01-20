@@ -1,8 +1,8 @@
 from sqlalchemy import (
     create_engine, Column, Integer, String, Float, Date, Text, JSON, DateTime
 )
-import datetime
-from db import Base
+from datetime import datetime, timezone
+from data.db import Base
 
 class Thesis(Base):
     __tablename__ = 'thesis'
@@ -17,7 +17,7 @@ class Thesis(Base):
     link = Column(String, nullable=True)  # Link to the thesis
     market_cap = Column(Float, nullable=True)  # Market cap at the time of publication
     price = Column(Float, nullable=True)  # Stock price at the time of publication
-    created_at = Column(DateTime, default=lambda: datetime.now(datetime.timezone.utc))  # Record creation timestamp
+    created_at = Column(DateTime, default=lambda: datetime.now(timezone.utc))  # Record creation timestamp
 
     # Text of thesis scraped from link
     text = Column(Text, nullable=True)  # Full text of the thesis
