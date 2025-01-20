@@ -1,5 +1,5 @@
-from db import Base, engine
-from models import Baseline  # Import your models here
+from data.db import Base, engine
+from data.models import Baseline, Thesis
 
 # Create all tables
 Base.metadata.create_all(bind=engine)
