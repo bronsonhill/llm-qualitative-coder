@@ -92,9 +92,7 @@ def ingest_yahoo_finance_data(batch_size=100):
         while True:
             # Query a batch of records with null finance data fields
             theses = session.query(Thesis).filter(
-                Thesis.profile.is_(None) | 
-                Thesis.daily_price.is_(None) | 
-                Thesis.dividends.is_(None)
+                Thesis.daily_price.is_(None)
             ).limit(batch_size).all()
             
             if not theses:
@@ -108,9 +106,6 @@ def ingest_yahoo_finance_data(batch_size=100):
                     thesis.profile = json.dumps(profile)
                     thesis.daily_price = json.dumps(format_prices_df(prices_df))
                     thesis.dividends = json.dumps(format_dividends_df(dividends_df))
-                    print(f"Profile: {profile}")
-                    print(f"Prices: {format_prices_df(prices_df)}")
-                    print(f"Dividends: {format_dividends_df(dividends_df)}")
 
                     session.commit()
                     print(f"Updated Yahoo Finance data for: {thesis.ticker}")
