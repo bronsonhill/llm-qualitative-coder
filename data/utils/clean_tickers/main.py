@@ -12,12 +12,16 @@ import json
 import yfinance as yf
 import pandas as pd
 from sqlalchemy.orm import Session, sessionmaker
-import openai
+from openai import OpenAI, RateLimitError
 from dotenv import load_dotenv
 import os
 
 from data.db import engine
 from data.models.Thesis import Thesis
+
+# for 4o-mini model
+COST_PER_INPUT_TOKEN = 0.15 / 10**6
+COST_PER_OUTPUT_TOKEN = 0.6 / 10**6
 
 # Configure logging
 logging.basicConfig(
@@ -34,7 +38,7 @@ class SearchResult:
     exchange: str
 
     @classmethod
-    def from_yf_quote(cls, quote: Any) -> Optional['SearchResult']:
+    def from_yf_quote(cls, quote: Dict[str, Any]) -> Optional['SearchResult']:
         """Create SearchResult from Yahoo Finance quote object."""
         try:
             return cls(
@@ -72,13 +76,6 @@ class YahooFinanceSearcher:
     def search(self, query: str, is_ticker: bool = False) -> List[SearchResult]:
         """
         Search Yahoo Finance for company or ticker matches.
-        
-        Args:
-            query: Company name or ticker to search for
-            is_ticker: Whether the query is a ticker symbol
-            
-        Returns:
-            List of SearchResult objects
         """
         try:
             search = yf.Search(query, max_results=self.max_results)
@@ -95,10 +92,13 @@ class YahooFinanceSearcher:
 class GPTTickerMatcher:
     """Handles GPT-based ticker matching."""
     
-    def __init__(self, model: str = "gpt-4"):
+    def __init__(self, model: str = "gpt-4o-mini"):
         load_dotenv()
-        openai.api_key = os.getenv('OPENAI_API_KEY')
+        api_key = os.getenv('OPENAI_API_KEY')
+        if not api_key:
+            raise ValueError("OPENAI_API_KEY environment variable not set")
         self.model = model
+        self.client = OpenAI(api_key=api_key)
 
     def get_best_match(self, company_name: str, ticker: str, 
                       search_results: List[SearchResult]) -> TickerMatch:
@@ -123,25 +123,50 @@ class GPTTickerMatcher:
         ]
 
         try:
-            response = openai.chat.completions.create(
+            response = self.client.chat.completions.create(
                 model=self.model,
                 messages=self._create_messages(company_name, ticker, simplified_results),
-                tools=[{"type": "function", "function": self._get_function_schema()}],
+                tools=[
+                    {
+                        "type": "function",
+                        "function": self._get_function_schema()
+                    }
+                ],
                 tool_choice={"type": "function", "function": {"name": "select_best_ticker_match"}}
             )
-            
-            result = json.loads(response.choices[0].message.tool_calls[0].function.arguments)
-            return TickerMatch(**result)
+
+            try:
+                # Get the function call arguments from the tool calls
+                if (not response.choices or 
+                    not response.choices[0].message or 
+                    not response.choices[0].message.tool_calls):
+                    raise ValueError("Invalid response structure")
+                
+                tool_call = response.choices[0].message.tool_calls[0]
+                result = json.loads(tool_call.function.arguments)
+                self._log_tokens_and_cost(response)
+                return TickerMatch(**result)
+
+            except (json.JSONDecodeError, AttributeError, IndexError, ValueError) as e:
+                logger.error(f"Failed to parse GPT response: {e}")
+                return TickerMatch(
+                    selected_ticker=f"{ticker}_UNKNOWN",
+                    reasoning=f"Invalid response format: {str(e)}"
+                )
+
+        except RateLimitError as e:
+            logger.warning(f"Rate limit hit, waiting before retry: {e}")
+            raise
         except Exception as e:
             logger.error(f"Error in GPT processing: {e}")
             return TickerMatch(
-                selected_ticker="PRIVATE",
-                reasoning="Error in processing"
+                selected_ticker=f"{ticker}_UNKNOWN",
+                reasoning=f"Error in processing: {str(e)}"
             )
 
     @staticmethod
     def _create_messages(company_name: str, ticker: str, 
-                        search_results: List[Dict]) -> List[Dict]:
+                        search_results: List[Dict[str, str]]) -> List[Dict[str, Any]]:
         """Create messages for GPT API call."""
         return [
             {"role": "system", "content": "You are a financial data matching assistant."},
@@ -155,7 +180,7 @@ class GPTTickerMatcher:
         ]
 
     @staticmethod
-    def _get_function_schema() -> Dict:
+    def _get_function_schema() -> Dict[str, Any]:
         """Get the function schema for GPT API."""
         return {
             "name": "select_best_ticker_match",
@@ -175,6 +200,24 @@ class GPTTickerMatcher:
                 "required": ["selected_ticker", "reasoning"]
             }
         }
+
+    @staticmethod
+    def _log_tokens_and_cost(response: Any) -> None:
+        """Log the tokens used and cost of the API call."""
+        usage = response.usage
+        total_tokens = usage.total_tokens
+        prompt_tokens = usage.prompt_tokens
+        completion_tokens = usage.completion_tokens
+        cost = (prompt_tokens * COST_PER_INPUT_TOKEN) + (completion_tokens * COST_PER_OUTPUT_TOKEN)
+        # Log the tokens used and cost to a file for easy calculation of total cost
+        log_file_path = Path('data/utils/clean_tickers/token_usage.log')
+        with log_file_path.open('a') as log_file:
+            log_file.write(
+            f"{datetime.now().isoformat()} - Total tokens: {total_tokens}, "
+            f"Prompt tokens: {prompt_tokens}, Completion tokens: {completion_tokens}, "
+            f"Cost: ${cost:.6f}\n"
+            )
+        logger.info(f"Total tokens: {total_tokens}, Prompt tokens: {prompt_tokens}, Completion tokens: {completion_tokens}, Cost: ${cost:.6f}")
 
 class ThesisUpdater:
     """Handles thesis record updates in the database."""
@@ -280,7 +323,9 @@ class TickerCleaner:
         """
         return session.query(Thesis).filter(
             (Thesis.daily_price.is_(None)) | 
-            (Thesis.daily_price == '\"[]\"')
+            (Thesis.daily_price == '\"[]\"'),
+            ~(Thesis.ticker.like('%UNKNOWN%')),
+            ~(Thesis.ticker.like('PRIVATE'))
         ).offset(offset).limit(batch_size).all()
 
     def apply_updates_from_csv(self, csv_path: str) -> None:
@@ -415,7 +460,7 @@ def main():
         default=None
     )
     
-    args = parser.parse_args()
+    args = parser.parse_args()  # Changed from ArgumentParser() to parse_args()
     cleaner = TickerCleaner()
     
     if args.from_csv:
