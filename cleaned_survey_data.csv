@@ -1,0 +1,833 @@
+,2275844: How did you use GenAI in the preparation of your report? List all use-cases as a series of dot-points with short explanations of how you used it.,2298314: How did you use GenAI in the preparation of your report? List all use-cases as a series of dot-points with short explanations of how you used it.,2298340: How did you use GenAI in the preparation of your report? List all use-cases as a series of dot-points with short explanations of how you used it.
+0,"Paraphrase
+
+gramma check
+
+coding","It helps me to paraphrase it.
+
+Give some initial idea for good starting.",
+1,,"Put unorganized sentences and information in a professional way
+
+asking for research directions
+
+double check my logics such as thermodynamics principles and simple math
+
+fix reference structure
+
+write VB macro codes for me","arranging sentences in a professional manner.
+
+correct grammars.
+
+sanity check on thermodynamic principles.
+
+referece generating.
+
+simple math."
+2,"* a more advance version of Wikipedia to obtain preliminary knowledge regarding green ironmaking process and its challenges of full commercialization; I entered a prompt, asking ChatGPT to briefly explain to me green hydrogen ironmaking process, its potential to contribute to a more sustainable and greener future, and what hurdles prevent its full-scale industrialization
+
+* a time-saving tool to obtain brief overviews on the most critical findings from research/review articles in green hydrogen ironmaking; I collected several research/review articles on the topic of green ironmaking, created GPTs, uploaded the articles, requested retrieval augmented generation from the attached files, and asked GPTs to provide a brief overview of each article and their most important findings.
+
+* an effective tool for getting very specific questions (partially) answered/(almost) unique ideas assessed in a considerably reliable way; After the preliminary research stage, I came up with several very specific questions and wanted to get them answered in a reliable way. Knowing that outputs from the standard use of ChatGPT would not be reliable, I took my time to collect some relevant articles and requested retrieval augmented generation from a separate GPT as per the information in the articles I found. I then asked my specific (mostly technical) questions and got them attempted in a reliable way, which I believe helped me a lot to realize the potential of this tool for my future learning.","* getting my thought process criticized in a constructive way
+
+* creating my own GPTs by uploading research articles
+
+* checking and correcting my pieces of writing
+
+* requesting in-text referencing from articles referenced in APA 7","For the final assignment, I have not used it very much to be honest because my major equipment was a fluidized bed reactor, and there is not much publicly available information about the design of fluidized bed reactors. The majority of my design considerations were based on the book of fluidization engineering by Kuni and Levenspiel. However, I have still used ChatGPT for increasing the overall quality of my writing. In addition to that, I have also used ChatGPT in changing the format of my references."
+3,"* Grammar checking and enhance the fluency of the paragraph 
+
+* Help making the paragraph more coherent 
+
+* Quick research about facts","* Grammar check - helping correct any grammatical issues in my written paragraph 
+
+* Quick calculation verification - do not need to re enter the value in the calculator 
+
+* Initial data gathering - brainstorming ideas","* Quick data search 
+
+* Grammar check for written paragraph 
+
+* Unit conversion"
+4,"* Information gathering: used to understand simple to moderate concepts. Not used for specific statistics or complex topics unless backed up by RAG input.
+
+* Paper summaries: used to summarise the key points in a research paper, including any key statistics. Could tune the summary to the questions I needed answered.
+
+* Project guidance: used to suggest areas to research relevant to the assignment brief, and specific questions that might be useful to answer.
+
+* Report skeleton writing: Providing an initial paragraph for new sections of writing which I can edit and write around. Gives a launching point for each writing section that I typically find difficult to do.
+
+* Report structure: suggesting what to include in certain sections of the report, and what order to include them. (Although it typically provided too large of a suggestion before iterating it shorter with more requests).
+
+* Rewriting of sections: inputting sections of text that I had written and asking for specific improvements, such as flow, brevity, clarity, readability, or simply removing grammar errors. 
+
+* Excel coding: asking it to code something I have explained with words, specifically for the macros in Excel. Adjusting the code based on errors or changes needed is simple, to do so myself or iterate the code in GPT. 
+
+* Referencing: input several downloaded pdfs and asking for references. Also used to sort and remove duplicates of final reference list.
+
+* Provide a summary of use cases for this quiz.
+
+* Perform mass balances on simple chemical equations: The maths was checked by hand but was typically correct. 
+
+* Generate a relevant image for the cover page of the report.","* Generic research: to summarise high level information
+
+* Report writing initiation: to provide an opening to a paragraph or report section, as a sort of springboard to keep writing
+
+* Report writing clean up: to improve the clarity, readability or brevity of writing sections
+
+* Structure recommendations: to suggest what should be included and in what order for different sections of the report, based on the brief
+
+* Excel or coding help: to help write excel codes to ascertain certain information from an excel spreadsheet
+
+* Calculations: to perform/double check hand calculations
+
+* Summarise written information: input PDFs or webpages and ask for a summary, or a list of information relevant to a specific single topic
+
+* Report writing: to write a report subsection based on given research or dot point summaries","* high level information gathering
+
+* summarising of reports or other PDFs into key dot points, or on information about a specific subtopic
+
+* summarising the conclusions of my report
+
+* writing an executive summary based on my report
+
+* writing and ordering references
+
+* creating suggestions on what to write in each section of the report
+
+* writing an introduction to a subsection, as a way to facilitate my further writing
+
+* helping make the writing more brief or clear
+
+* Generating code based on a written description in matlab or in excel
+
+* suggesting methodology for the tackling of the model creation (based on input references)
+
+* solving mathamatical equations"
+5,"-used it in on how i should structure my writing (e.g, what should be included) 
+
+-used in making my paragraphs more professionally written and toned
+
+-used in finding the meaning of some words that are not familiar to me as a non-native speaker
+
+-used in summarizing informations from researches. This actually saved so much time.","-used it when i want to structure my report, like what criteria should i put on my technology selection and what should be weighing of each criteria.
+
+-used it when I want to present the writing I done into a more professional tone/way. 
+
+-used it as a dictionary on unfamiliar words, and also when i want to know what are the differences of each technology such as 2 phase separator and knock out drums 
+
+-used it to give me an idea on the different technologies being used in the industry. For instance in solid-gas separation (cyclone, baghouse filters, etc.) 
+
+-used it when I'm researching technologies, like what should the topics I need to search to give me an information regarding the technology that I wanted to see.","-Structuring my report/outlining it (what to include)
+
+-Making my sentences/paragraph more concisely and professionally written 
+
+-Making a sentence for me for instance I listed all the results I calculated for my sizing, including the formulas and it generated me a paragraph
+
+-Provided me a summary of a paper/journal that is lengthy and list all the key elements that are important on my study 
+
+-Used as my dictionary on different terms or words that are not familiar to me 
+
+-Asked on various concepts i.e if the reboiler temperature is increase, what would be the effect on the regeneration column, or if the pressure is increase. This also applied on the other unit operations such as HEX, Absorber, etc. 
+
+-Provided me a quick understanding on how the TEG dehydration unit works and used to cross checked facts that I read from journals and papers 
+
+-In terms of startup up shut down procedure in P&ID it gave me an idea but very general but it gave me an idea"
+6,"- I started by asking how I should research. When I am just starting research, the first difficulty I encounter is what and how I should research. Asking this question to the AI, drawing a path for myself and researching accordingly prevents me from wasting a great deal of my time. In this respect, I find AI very useful. And used AI from this view of point so much for this assignment.
+
+- I used AI by asking some specific information directly in the form of whether it is true or not.
+
+- When I do any kind of  research (for example on Google), I open at least ten pages and often only read two. But since I search for the answer to my question directly with the help of AI, I can often read what it writes, do more detailed research on the research and read in more detail. Chatgbt was not very useful in this regard, but artificial intelligences with access to the internet are very useful in this regard.
+
+- Previously, I used extra tools such as Grammerly for report writing, especially for grammar. Now I can only correct grammar with artificial intelligence. I used this a lot in report writing.
+
+- I find it very useful in creating tables and algorithms on any subject. I asked a few times how to create the tables I use in the report with the help of chatgbt.
+
+- I also use ChatGBT's coding skills a lot in my daily life. I haven't used it before for macro excel. It was useful for me to create macro excel code.","* Grammer check
+
+* Asking direct questions (Yes/No)
+
+* Definitions
+
+* Reference writing","* mostly for grammar correction
+
+* creating code and graphs
+
+* converting to dot points to writing
+
+* asking simple calculations to see whether my logic is correct"
+7,"Research Ideation
+
+-It helped in the ideation of my research. I inputted the questions from the brief, and it give me prompts on what I need to research in.
+
+Writing of the report
+
+-In inputted the data I collected, as well as the preliminary writing I did previously in a draft document into chatgpt and ask it to collate my research and create a sample report for me. However, this was insufficient so I kept prompting it to change a few words or include something extra. I f it was lacking I went online to search more articles so that I can get appropriate research material to be inputted into my report.","* Research Guidance: I used ChatGPT to guide my research, to clarify the tasks I had ahead and what else I could research about for deoxygenation, evaporation ponds or new ideas that I have not thought about.
+
+* I prepared a draft of my work and asked ChatGPT to make it more professional as most of my writing was informal in terms of second person not third person writing as my teammates checked while we were doing the final review. I think that is the reason that all of my words look like they are pasted from ChatGPT, Do I get no marks for that? I am so confused.
+
+* Collated the final review.
+
+* Prepared the executive summary, used chatgpt to read through the report, I also had my teammates gather key points that they needed in the summary, and used that to create the exec summary, I also prompted it to change here and there and modified the exec summary as the first draft of the exec summary was not that good. 
+
+* Coding for evaporation pond- Helped create the code for excel and how to prepare my excel sheet.","* Perfect my writeup for the report. (Its shows 100 % because I have been using it to write in a formal tone and too include various parameters into my report. 
+
+* Used as a suggestion tool when I am stuck on a particular topic.
+
+* Write down of equations
+
+* Research help. I used it to read my research papers. I had to double check multiple times but it is useful."
+8,"* Copy any English sentence or paragraph that I hardly to understand and ask ChatGPT to clarify it.
+
+* Paraphrasing a complicated paragraph into simple explanation for several version.
+
+* Writing my own writing based on several version of these more simple paraphrasing.
+
+* Ask ChatGPT to identify any grammatical mistake.
+
+* Ask ChatGPT to concise each big section into one paragraph for executive summary.",#NAME?,"* Correct my grammar and writing structure.
+
+* Give an idea about general concept, for example in material selection for equipment.
+
+* Help me drafting executive summary and conclusion.
+
+* Help me write a paragraph based on dot point that I find during simulation."
+9,"1. As a non-native English speaker, I use ChatGPT to polish my writing when preparing paragraphs.
+
+2. Try to use ChatGPT to search for businesses that may have prices on equipment for the DRI production process.
+
+3. Trying to use ChatGPT to simplify my paragraphs in a report due to excessive text.
+
+4. Working in a group to generate an executive summary using ChatGPT and making some improvements to the generated text to be used as a formal executive summary.","When design for some parameters of process unit operation, ChatGPT was used to help search and conclude the possible value.
+
+Used for language translate
+
+Used to improve polish paragraph
+
+Group used to generate executive summary","Search for the parameter range of the equipment
+Polishing sentences using ChatGPT
+Search for equipment expenditure data
+Use ChatGPT to generate the Executive Summary."
+10,"I mainly used it to co-write some sections through specific prompts and iteration. I find ChatGPT can be unwantedly creative when it comes to writing about technical parameters, so any assistance I received from ChatGPT was thoroughly vetted and commonly discarded.
+
+I did use ChatGPTs RAG functionality to help filter through large documents. Any results supplied were also vetted to ensure accuracy.","Fleshing out some ideas into more coherent and digestable sentences and paragraphs.
+
+Summarising long articles to determine whether they contained useful content.
+
+Using it as a search engine that I can interact with.",I used ChatGPT to re-write my executive summary after i gave it a very rough first pass.
+11,"When I determine the task I am responsible for, I will first read the guidance on handbook and ask chat gpt if I am not clear. Also, when I'm out of ideas, I ask chat gpt to give me some ideas, and then go online and look for information on my own.","1 Ask chat gpt about concepts I haven't heard of
+
+2 Ask about the differences between two similar concepts
+
+3 Ask about keywords that are effective when finding information online","I would ask chat GPT questions that I didn't understand, then look at his answers and ask him for literature. If the literature is not reliable, I will not use it. If the literature is reliable, I will continue to conduct in-depth research on my own."
+12,"I request chatgpt to introduce the direction of my research and provide me with ideas. For example, I asked chatgpt what DRI is and what are the common technologies. Then I will search for technologies that interest me on Google and Google Scholar.
+
+I use chatgpt to help me summarize the content of literature. I download reviews or literature I found on Google Scholar, upload them to chatgpt, and then ask chatgpt to summarize the key points of the literature or ask it questions that I interest in.
+
+I use chatgpt to find grammar errors in my writing. Sometimes I ask it to revise my writing to make it more academic.
+
+I use chatgpt to summarize my content and then I shorten and modify it myself.",0,"1. Ask a question (such as how to ensure hydrogen purity when using a reciprocating compressor), and then search for relevant literature on Google Scholar based on the answer. If the answer includes the use of diaphragm compressors and oil-free piston compressors. I will search for both types of compressors separately and make a choice based on literature.
+
+2. Upload literature and request ChatGPT to answer questions based on the literature.
+
+3. Use ChatGPT to find my grammar errors."
+13,"1. Use GenAI to perform brainstorming to gather ideas for the outline of the strcuture of the report
+
+2. Use GenAI to generate a general structure of the section I am writing
+
+3. Use GenAI to make paragraphs more consistent and concise
+
+4. Use GenAI to summarize the information and integrate them into my original paragraphs.","Formatting report, summarize key takeaway from academic articles","Gather basic information regarding unit design
+
+Organize the report format
+
+Give suggestions for questionable content"
+14,"Ask following question, and use answer to search on google scholar
+
+* What are the animals and plants around Port Hedland, are there any endangered species, are there any large mammals, and are there a large number of birds?
+
+* Detailed description of Port Hedland and its surrounding environment.
+
+* How many bird species are there in the protected area near Port Hedland?
+
+* What are the wind power companies in Australia and the projects they operate?
+
+* All possible technologies of DRI, please classify them as carbon dioxide emissions and non carbon dioxide emissions.
+
+* If DRI can be obtained through direct electrolysis and the project can be implemented, what is the electricity cost range?","* What are the common hydrogen storage methods for ChatGPT
+
+* What are the common hydrogen compression methods for ChatGPT
+
+* Let Chat GPT recommend relevant literature
+
+* search on Google scholar
+
+* unknown words search on Google translate
+
+* search Chinese on Baidu Scholar","* How to design reciprocating compressors using ChatGPT, are there any recommended literature, and are there any companies that have published data?
+
+* Search for unknown words using Google Translate"
+15,"* Initial fact finding using a RAG, just to start the thought process.
+
+* Writing intro paragraphs to sections. Asked something like ""what are  the location factors that should be considered when building a DRI plant in the pilbara"", then editing the output to a form that I like. 
+
+* We had two sections (viability and recommendations) written by two people, they both said very similar things so we combined them into one section using chatgpt. it still required editing after but it greatly speed up the process. 
+
+* I used the key findings doc to start creating the Executive Summary, then another member used it to create one paragraph about each section of the report. Using these two sections I manually combined them both to create the executive summary. 
+
+*
+
+* That was the main points, there may have been other smaller points.",I used it a bit for coding but that was it,I didn't use AI for A3
+16,"* Generate ideas for researching 
+
+* Finding research sources (e.g. if I can't find the price of the land, I'll ask GenAI: ""Give me some sources to find land price in Port Hedland"")
+
+* Help me with professional writings, e.g. fixed my writings
+
+* Provide ideas for report-writing
+
+* Tell me what is first principle and provide me some ideas to break down the research in the first principle
+
+* ask about some of the definitions and translate them to be more simple to me
+
+* citations for sources in APA7 forms","* Ask for some key concepts clarifications
+
+* Breakdown the parts into first principle for better understanding and report writing
+
+* Seek for calculation methods
+
+* found related resources when I cannot find on google
+
+* I write my own words and put into ChatGPT to let it generate a more professional writing for me.
+
+* APA 7 citationI think profession","* Breaking down the design into first principle for me to easier do the design step by step
+
+* Generate an executive summaryof th major equipment design by using the equipment data sheet I have for me due to time comsuming 
+
+* help me with pipe sizing calculation of P&ID (however it might not be accurate, but it can help me with thinkings)"
+17,"* I gather my information in dot points in ChatGPT, and I used it to put it in a proper paragraph for my report,
+
+* I pasted a long report/article in ChatGPT, and asked to summarize or extract specific information out for me (eg: Based on this report, what is the current DRI production in India?)
+
+* I've used ChatGPT to reparagprah and rephrase my sentences or paragraph to improve fluency and flow.
+
+* I'ved used ChatGPT for final edits and review, helping to ensure the report was polished, free of errors and also for referencing arrangements.
+
+* I'ved used ChatGPT to draft and refine executive summary/conclusion, focusing on capturing the key points and important values in the report.
+
+* I'ved used ChatGPT to come out with ideas of how to present my Risk Analysis Section which prompted me the creation of a risk analysis table by detailing potential risks, their effects, and mitigation strategies, which capture the audience with better visuality.","* I used ChatGPT  to elaborate on technical details, such as the maintenance and environmental considerations for the coalescing filter and weather-related hazards affecting solar-powered systems.
+
+* I used ChatGPT in drafting sections of the report, giving me a brief outline and sections I should include for each of my equipment.
+
+* I used ChatGPT in organizing the report structure, ensuring a logical flow of information and proper section headings.
+
+* ChatGPT reviewed and suggested improvements to grammar, syntax, and overall readability of the text.
+
+* ChatGPT created concise summaries for various sections to capture essential information for executive summaries and conclusions.
+
+* ChatGPT suggested useful formats for presenting data, such as tables and charts, to enhance clarity and impact when I feel like the paragraphs are too wordy and lengthy.
+
+* Used GenAI to elaborate on technical details, such as the maintenance and environmental considerations for the coalescing filter and weather-related hazards affecting solar-powered systems.
+
+* I Used ChatGPT  to elaborate on technical details, such as the maintenance and environmental considerations for the coalescing filter and weather-related hazards affecting solar-powered systems.
+
+* I used ChatGPT to shorten and simplify lengthy technical discussions while retaining key details. 
+
+* For complex processes like the PEM electrolyser modeling in Aspen HYSYS, GenAI helped break down the steps, making them more concise while maintaining the technical depth.
+
+* ChatGPT helped in recalculating energy and heat losses for hydrogen production processes, ensuring that the numerical analysis was accurate and followed the correct logical steps. 
+
+* I used GenAI to format references in APA 7 and ensure the correct in-text citations were included for all sources, saving time on citation formatting.","* I've used ChatGPT to do referencing for me in alphabetical order
+
+* I've used ChatGPT to reparaphrase my thoughts and ideas which was initially very messy and it helped me to reorganize and put into proper sentences and paragraphs for me
+
+* I've used ChatGPT to look for correct key words that I have to use to search on the internet to get the best outcome and result 
+
+* I've used ChatGPT to organize my report (proper table of content, headings, subheading, etc"
+18,"* After writing most paragraphs I would put them into chatGPT and ask it to make them more coherent and professional
+
+* I used it to generate an initial summary outline for the feasibility report, with subheadings of things to include
+
+* I used it to generate a list of things to consider under my assigned sections (i.e. a general outline of the section structure) to help start my research process","* generating topic ideas for research in some sections
+
+* helping rewrite some paragraphs in a more coherent and professional way","* used to rewrite some paragraphs to make them flow better with a more professional tone
+
+* used to code the excel macro for the process model"
+19,"* mostly used for rewriting my thoughts into a report writing style.
+
+* Shortening paragraphs to be concise and keep to the page limit. 
+
+* to get a basic understanding of DRI using green hydrogen
+
+* to get some dot points to base of research","* re-writing the report in a formal tone fit for a engineering report style.
+
+* intial research to figure out what to research more extensively
+
+* summarsing information","* genreation of cover page
+
+* assisted in generating a VB code for model
+
+* intial research into process and design
+
+* proof reacding and paraphrasing the report"
+20,"For the sections where I contributed, I used GenAI to help revise some of my paragraphs after writing. Mainly using the prompt 'Please check this paragraph for clarity, but keep the ideas'. I then compared the two paragraphs and edited some of my paragraphs to gather conciseness and remove repeated contents.
+Background research using a custom RAG tool. I used BingAI to get an understanding of the project and contents, then obtained the sources it provides in each response. The articles that it provided were generally open source, or publicly available, so those were used in my RAG. Then I would review the abstract if it matched the information I needed and inputted it into the RAG. The RAG helped with basic ideation and gave points to think about for the project.
+VBA coding. I used ChatGPT to help code, making a RAG with chemical engineering economics background. I gave up on this RAG as the response time was super slow after too much code was implemented. The general ChatGPT was more efficient and I could feed information via screenshot to simplify my instructions. I prompted ChatGPT to make code and not give code until instructions were fully listed. I also checked that it was doing what I wanted to first before getting code. This means asking for a detailed explanation of what I have asked so far and listing it out.","I used GenAI to write equations for me. I had the equations written out by hand or typed out and told ChatGPT to format it into MS word equation editor. This worked pretty well
+
+I used it for research into a topic I was super unfamiliar with to get a brief background knowledge before doing more thorough research.","I asked it to generate my conclusion, and it was terrible so i scrapped it.
+
+I used it for equation writing by copying in a template and getting latex code and formatting it that way. I fed the AI my excel spreadsheet and it formatted equations that I wanted.
+
+I used it to generate my logo in teh P&ID."
+21,"-              Taking out values from sources and asking for what pages etc a specific part what
+
+-              Developing the macro
+
+-              Basic writing fixes (proof reading)
+
+-              Some idea generation and validation
+
+-              Asking for references","* Finding sources, especially when my search was very specific
+
+* find pages and sections of textbooks that outlined the information I was looking
+
+* more concise writing or rewording","Writing clean up and preparation
+
+general knowledge and sense checks
+
+source finding
+
+VBA macro"
+22,"* Early stage research about the topics to get a basic understanding so I could start more detailed research
+
+* to turn dot-point/rough writing into more formal writing, although I usually had to re-write this again as i felt it lost some of the meaning
+
+* Generating sections of code for specific actions in the macro
+
+* helping to debug my vba code, by putting in the code and error messages
+
+* when editing/crosschecking othersâ€™ report sections, I identified sentences to improve then asked ChatGPT to rewrite for clarity/formality etc","Given this assignment was more technical than the last, I only really used ChatGPT to assist with the write up for some sections:
+
+* input a series of dotpoints and ask it to turn it into a few paragraphs, using the output as a first draft
+
+* input a paragraph i had written and ask it to improve the clarity/flow",Only to turn dotpoints into paragraphs for conclusion and rewrite some paragraphs to improve flow
+23,"* Created GPT specifically for assignment, configured with relevant documents 
+
+* Used created GPT to search for specific statistics within library of documents
+
+* Prepared executive summary by feeding in report body
+
+* Generated images for report title page",- Used to code MEB tool; described function needed and copied & pasted code,"Used to generate VBA code for sensitivity analysis, taking user defined +/- percentage variations of investigated parameters and extracting the NPV for each."
+24,"* Refinement of writing: used GenAI to shorten paragraphs and refine sentences especially when writing late at night when you struggle to articulate what you are saying and chatGPT helps to do that. Sometimes have to go through and reword, but most of the time, the broaded messages are captured well. 
+
+* Basic overview of concepts: used chatGPT to provide a basic intro of new concepts before further researching online. It is good at providing a high level summary. 
+
+* Coding: chatGPT was able to assist with small chunks of coding, so writing VBA code for small sections. It was not very good at writing big chunks of code or looking through entire code without making unwanted changes. 
+
+* Ideation: used chatGPT to see what insights or directions they would take.",Only used it to reformat sentences but still edited them afterwards. Also used to for preliminary facts before trying to find things online where it was really challenging to find specific numbers.,"* Rewording paragraphs especially late night writing
+
+* Generating ideas especially when I did not know where to get started"
+25,"Here are the listing of things that I used ChatGTP for.
+
+1. After brainstorming ideas for different sections of the report, use ChatGTP to regenerate ideas and compare with mine. 
+
+2. Generating whole paragraphs from dot points and ideas
+
+3. Ask ChatGTP to search for reliable sources, saving me time scooping information from the website. 
+
+4. Using ChatGTP to shorten my paragraph without changing the concepts and facts in the original paragraph.","* Feeding the AI key points and having it write an executive summary for the report.
+
+* Consulting ChatGTP what are the likely criteria when selecting equipment such as electrolyzer.
+
+* Using ChatGTP to search information among the open-sourced webpages.
+
+* Only a small portion of the writing is done by feeding key points to ChatGTP, the majority of the writing is done manually, but the paragraphs were copied and pasted to ChatGTP to enhance the tone and choice of words.
+
+* ChatGTP was used to help code for the Excel macro for estimating the energy requirement for each of the component. I built up a scenario for ChatGTP, and fed my request to it such as populating block B2 to block M2 with the monthly energy consumption of PEM water electrolyzer.
+
+* During proofreading, when I had a question about the accuracy of the information provided by my other team members, I used ChatGTP to do a quick check before occupying other team members' time asking questions.","* List all the ideas as dot points and input them into ChatGTP to write a professionally worded paragraph for me
+
+* Use ChatGTP to search for information from reliable open sources such as the dimension of the stainless steel nozzle
+
+* I attempted to use ChatGTP to make an Excel macro for the sensitivity analysis during the completion of the discounted cash flow table but failed due to a time limit."
+26,"* Predominantly used for coding of VB in excel - ask chatGPT to write code based on plainlanguage instructions and iterating to build up code bit-by-bit
+
+* Minor used in confirming facts or trying to find references for certain facts
+
+* Asked it to design a title page that I ended up using the recommended colour scheme for
+
+* Asked it to identifty spelling and grammar issues in final text but only picked up on <50%
+
+* Got it to write an executive summary based on written report but did not use any of it as it was not what I wanted","Mainly just for research and background information - gaining initial information on topics such as unit operation performance, then attempting to use ChatGPT for further sources (to little effect)","Primary research - ballpark figures I then cross-checked
+
+Reading through papers and telling me key information from them
+
+Explanation of some concepts and calculation methods e.g. flash drum sizing"
+27,"- Strategy - before starting each section, I would ask AI â€œhow would I approach estimating a production capacity for a DRI plant in WA?â€ (example) And it would recommend a step by step approach which I would integrate with my own approach. Otherwise I would ask AI â€œIs this the right way to approach this:â€¦.â€ and it would refine my approach. 
+
+- Writing Assistance - I would write my own paragraphs based on my research and calculations, and programmed my AI assistant to make the paragraphs â€œclear and conciseâ€ whilst keeping any statistical data. Sometime I would specify to frame the rewrite to emphasis a certain conclusion or critical thinking point. 
+
+- Formatting - I would ask AI to reformat chunky paragraphs to a clearer format, which would normally consist of breaking the information into dot points that were easier to digest 
+
+- Typical scaling values for economic values - I would ask what range the sensitivity analysis should be scaled to, and check this against research trends","* Proof reading - especially helpful after long periods of writing/studying when writing became less eloquent. It was helpful to describe your work/thinking in simple language, and have AI convert the same phrase into a more professional tone or cohesive sentence.
+
+* Approach to math equations - in general, helpful to cross check approach to material and energy balances 
+
+* Macro tool - incredibly helpful for this! At the start I was fully reliant on AI to code and make changed and by the end of the assignment I could write simple coding changes straight into excel. 
+
+Overall, less AI use for this assignment in comparison to A1.","* proof reading prewritten work  
+
+* dot point approach to problems 
+
+* Validating process logic and controls"
+28,"Mainly for finding starting points for further research the old fashion way, casting a wide net with a genAI search, and then digging deeper into any ideas that matched with what I was searching for.
+
+In terms of actual report content generation, I only used GenAI in my section on environmental impact of the project. I had a list of about 8-10 dot points containing key points, information, and statistics I had gathered and I used genAI to quickly create a readable paragraph from these dot points. From there a decent amount of editing was undertaken, but it made a positive impact mentally as I didn't have to construct the large paragraph from scratch I was now just polishing and editing an existing paragraph which is a much less mentally intimidating task.
+
+This helped aleviate the feeling of being overwhelmed by the sheer volume of writng that can come with these large reports, thus reducing procrastination and enhancing my personal workflow.","basically as a substitute for google, or used before i google something to narrow down my search criteria. No real in depth usage of GPT but more for scanning surface info on new topics quickly.",
+29,"* Brainstorm key elements to touch on in the discussion 
+
+* For cowriting, to restructure a prewritten paragraph to make it sound more professional
+
+* For preliminary information gathering - ask what it knows on a topic to get an overview on the subject and to reference check the details later",#NAME?,"* research information on absorption packing types and materials for the use in the TEG dehydration column
+
+* Research key data to include in the equipment specification design sheets for a packed column and pump
+
+* Research key features to include in the mechanical drawing
+
+* Used to write conclusion"
+30,"* Proofread and improved my clarity and flow of written content.
+
+* Research similar plants for CAPEX calculation
+
+* Reviewed and corrected any inconsistencies or errors in the text
+
+* Provided initial draft of what should be included in my sections
+
+* SUMMARISE LONG REPORTS !!","* Rewrite my paragraph for clarity
+
+* Find me papers/resources for my relevant topic
+
+* Cover page image !!","* Research purposes
+
+* Table of content creation 
+
+* Help me arrange all my references into places
+
+* Paraphrase my sentence into a smoother flow
+
+* Give me an overview on deoxygenation unit"
+31,"* improve and edit writing
+
+* referencing 
+
+* for researching specific things, e.g. cost of transporting iron ore from aus to china, to see if there was a specific answer chatgpt could give me. If it did have an answer I would follow up with asking for the source of this information and looking through that article/website
+
+* for initial research into a topic 
+
+* final editing of text","* research
+
+* ideas
+
+* sometimes writing but usually wasnt good enough and required rewriting","* research
+
+* easy writing e.g intro"
+32,"* Explain technical terms
+
+* Help to brianstorm ideas
+
+* Paraphrase or reduce my lengthy sentences
+
+* Organize a daily routine/schedule for me as I felt too tired with three days work and 2 days uni 
+
+* Consult with ChatGPT about anxiety raised approaching the deadline of assignments, it does provide some useful suggestions which helped me to finish my report on time","* Help me to write the VBA macro codes
+
+* Paraphrase
+
+* Provide ideas on safety risks
+
+* Suggested relevant AS to look at
+
+* Help me to find few autocad drawing feature
+
+* Reduce words and resctructure my lengthy paragraphs","* Value checking for my calculation to see if is within reasonal range
+
+* Explain component parts in the compressor for mechanical design
+
+* Relevant safety and standards in design 
+
+* Parapharse and restructure report
+
+* Grammar check for passive voice used
+
+* Summarize my key findings for executive summary and conclusion"
+33,"* Paraphrasing: changing the wording of a paragraph
+
+* Making paragraphs shorter or longer
+
+* Researching
+
+* Explanation of basic concepts(used to revise topics)
+
+* Turning ideas(dot points) into a professional sounding paragraph 
+
+* Writing code for excel macro","Researching: Finding information and summaries about relevant topics
+
+Re-wording: Summarizing or expanding text
+
+Finding values: such as Cp (pretty close to what is in other sources and literature)","Researching: finding quick info and summaries on a topic 
+
+Re-wording: making my writing shorter, longer or change the tone
+
+Sanity check: performing calculations and obtaining values(to double check my own calculations)"
+34,"* knowledge harvesting on the green steel and steel industry
+
+* summarising a large body of text when needing to understand a new process i.e. DRI - so uploading an entire study and asking for key points/lessons etc. 
+
+* LCAs - the myGPT LCA expert was useful in generating ideas about how to apply the technique to the H2-DRI facility (although level of complexity was high and hence not included in the final report) and also drawing upon facts from a paper on utility-scale solar farm LCAs that helped buffer the report with some critical thinking in section 8.2. 
+
+* Honestly did not play the biggest role in generating our report more than gaining a quick understanding of a new topic, and syphoning facts and figures when prompted correctly - to support a line of reasoning in the report.","HYSYS custom GPT: Created a customised GPT and uploaded multiple guidebooks, manuals and unit operation explanation and fundamentals for Aspen HYSYS. If I had an error in my hysys simulation for a temperature cross or a nonsensical energy stream, I would ask the GPT for possible sources of the error. 
+
+ 
+
+Fluid package types: Uploaded a directory/source information on fluid packages and asked question and for facts on each - assisted in arriving at an appropriate conclusion.",sense checks for method of calculation or problem-solving steps.
+35,"shortening paragraphs
+
+general research
+
+syntax corrections
+
+VB coding","research, especially preliminary research on topics I was unfamilar with
+
+proof reading work","proof reading
+
+basic research
+
+simple calculation such as gas density using ideal gas law"
+36,"* Uploaded and Summarized Documents:
+
+* Used ChatGPT to provide summaries of various documents uploaded
+
+* Added specific files to the Retrieval-Augmented Generation (RAG) system for reference.
+
+* Web References and Citations:
+
+* Retrieved and summarized information from specific websites related to hydrogen projects, government initiatives, and renewable energy in Australia.
+
+* Chat provided citations for various sources I referred to, including official government websites, research articles, and industry reports.
+
+* Rewording and Content Improvement:
+
+* Assisted in rewording various paragraphs and sentences to enhance clarity, conciseness, and readability.
+
+* Used Chat for rephrasing technical content and formalizing my writing.
+
+* Research and Analysis:
+
+* Conducted searches within uploaded documents to extract specific information
+
+* Used Chat for topics to guide research
+
+* Project Support:
+
+* Provided guidance on the strategic planning of energy supply and infrastructure for the DRI pilot plant project.
+
+* Assisted in crafting ideas for introductory and explanatory paragraphs
+
+* I also used Chat to help summarise its uses as I primarily worked through a singular tab as it stored all my previous inquiries and tasks","In the preparation of this assignment, I utilised Chat to assist with various tasks related to the completion of my project. The AI tool was used specifically for the following purposes:
+
+* Clarifying concepts: I sought explanations for technical concepts to deepen my understanding of these topics.
+
+* Generating ideas and outlining: I used ChatGPT to generate ideas on how to structure sections of my report
+
+* Rewriting and improving text: The AI assisted in rephrasing and improving technical content to ensure clarity and professionalism in my written communication.
+
+* A a research tool.
+
+All information generated by ChatGPT was verified, validated, and supplemented by me through independent research and academic resources to ensure accuracy and compliance with academic standards.","* Data Analysis and Interpretation: I used GenAI to generate insights and explain complex concepts based on data provided
+
+* Rewording and Enhancing Writing: GenAI helped to reword and improve the clarity and professionalism of various sections of my report, ensuring the tone was formal and consistent with technical writing standards.
+
+* Technical Explanations: GenAI provided detailed technical explanations for specific processes
+
+* Revising Paragraphs: GenAI helped refine and condense some technical paragraphs, ensuring conciseness and precision while retaining all essential information.
+
+* Identifying and Implementing Control Logic: GenAI assisted in identifying the control logic in the P&ID for temperature, flow, and pressure controls, as well as the use of Variable Speed Drives (VSD) and the role of DCS systems.
+
+* Answering Specific Technical Queries: I used GenAI to answer specific technical questions related to hydrogen compression, pump operations, nitrogen purging, and flow control methodologies. Albeit, this was only for ideas and proper sourcing was then used."
+37,"1. Use to rewrite my writing since my writing is not academic/professional enough. ChatGPT can generate academic/professional writing easily.
+
+2. Summarise papers. ChatGPT Is used as like a searching tool for the information in the papers.
+
+3. Ask general questions like how is green steel produced, however it is not always trustworthy.
+
+4. Generate code according to the description.
+
+5.  Ask ChatGPT to spot any mistakes in my writing, and output the errors in a tabular format so I can improve my writing.","Paraphrase
+
+Answer questions that are not so technical, for example, how does water desalination work","Paraphrase
+Recommendation"
+38,"Search engine: very useful to get an elementary understanding about new things, or search the specific information (but not reliable enough even for GPT 4o).
+
+Translating between English and Chinese.
+
+Reversing/Editing the draft.","* Get a quick understanding of the work.
+
+* Obtain the information/links I need.
+
+* Translation and grammar check.
+
+* Do some simple calculations.
+
+* Generate VBA codes.","* Get a quick understanding for unfamiliar knowledge.
+
+* Generate the report structure.
+
+* Help me finish the report step by step.
+
+* Analyzing the files feed to it."
+39,"* Primarily used GenAI for early learning of content related to green steel production and various technologies. 
+
+* When writing the report I asked it occasionally for rephrasing of complex sentences, whereby I usually identified that what I had initially fed it was not clear enough in meaning, so this would help me reconceptualise the sentence.
+
+* I sometimes asked it to suggest financial jargon to me for concepts that I was trying to explain, e.g. eco-labelling premium, premium tolerance/demand elasticity. 
+
+* I can't recall ever copying whole sentences, they were often too verbose, and the effort required to get ChatGPT to refine it was not worth it.","I don't recall copying much word for word.
+
+* Discussed mainly the function of different equipment options with ChatGPT. For example, how colder inlet temperature might benefit a TSA unit, and how the regeneration cycle occurs.
+
+* Clarifying understanding technical jargon, for example, types of solar tracking in the calculation tool (single axis)
+
+* Used ChatGPT to edit VBA code sourced through an online forum, to fix some variable input parameters and simplify the tool.
+
+* Used it as a quick check for unit conversions, but don't really trust it for this","Helped me write the exec summary when I had no time
+
+I put somescreenshots of its effort at doing basic stress analysis on carbon steel endplates in the appendix and noted in the report that this was just used to inform drawing them/needs revisiting"
+40,"Assisted with using gen AI to code excel macros
+
+Very limited usage to create summaries of new topics
+
+Created a RAG to assist with social and environmental section which got little use as my focus was not on this area",Used Chat GPT to produce latex code from a picture of handwritten calculations for inclusion in report.,I didnt
+41,"* research assistance
+
+* Background research on green DRI and the steel industry
+
+* used to assist in estimating the capacity of the proposed DRI plant
+
+* Calculations assistance
+
+* Used to conduct mass and energy balances for certain reactions
+
+* used for sanity checks so that the numbers were within acceptable ranges","* Asked general questions to determine the units of the process (fluidized bed or shaft furnace)
+
+* asked to perform mass and energy balance calculations to cross-check with hand calculation
+
+* VBA code generation","Information gathering
+
+Confirmation of critical thinking"
+42,"Finding statistics in journals 
+
+re writing a paragraph 
+
+getting quick answers to general questions","To get information quickly, double check things","-Executive Summary 
+
+-Getting general information quickly"
+43,"Chat GPT: 
+
+* Made a group logo for our minutes form (kind of Dall-E, not sure how this would be classified)
+
+* Made chatbot to answer questions about green DRI (minimally used)
+
+* Dumped dotpointed ideas into Chat GTP and asked it to craft me report-style paragraphs 
+
+* Got it to summarise the Exec Summary and then edited / re-wrote it 
+
+* Asked for summaries of key constraints based on its training dataset 
+
+* Got it to write Exel Macro using plain English and then pieced together differnet cod sections / got it to explain what different parts did
+
+* Some proofreading for typos and syntax in other ppl's sections","ChatGPT trained on pre-existing environmental impact statements and then tasked with both brainstorming what should be included in the EIS, and doing the actual write-up (often from dot-points). If I felt like it was lacking, detail was often added through additional instruction provided to the trained chatbot. 
+
+Write-up in general often done with ChatGPT, usually from dot-points. 
+
+ 
+
+Unsuccessful attempted uses: 
+
+* drafting neat equations for insertion into the report. Definitely possible I just didn't spend the time to get the knack of it
+
+* Alphabetising references (it would delete some, so it was easier to just use a free website to organise them).","Often dot pointing things that i wanted to include and getting an academic language bot to draft / synthesise the report. 
+
+Trained a GPT on a suite of academic papers to parse and interpret information about deox units 
+
+Would sometimes ask GPT to brainstorm ideas for a section"
+44,"* Research - starting point for what topics to research, and broad summaries of topics to guide my more detailed research
+
+* Intial drafting of sections - providing my research in dot points and using chat GPT to provide an initial draft
+
+* Providing summaries of reports, websites and source materials","Initial thought generation and planning
+
+preliminary research
+
+providing background information on topics adjacent to material that I needed an understanding of
+
+initial drafting of sections of writing","Providing initial summaries of areas of research, drafting initial write up sections based on notes"
+45,"* Drafting Reports: Assisted in writing and refining sections of feasibility reports, including introductions, summaries, and conclusion paragraphs.
+
+* Asked it to write an introduction for a green steel feasibility - then refined this through cowriting and adding specifics
+
+* Data Interpretation: Helped analyse and interpret data related to green hydrogen and DRI production, applying insights from uploaded documents (RAG)
+
+* For example: I had a bunch of uploaded documents then asked what a reasonable production capacity is and it gave a range which was a good starting point for our considerations
+
+* Technical Writing and cowriting: Provided assistance in technical writing, ensuring clarity and fluency in complex engineering topics. Asked it to write a series of dot points into a paragraph and also asked it to rewrite paragraphs to make them more concise and shorter
+
+* Methodology Clarification: Clarified methodologies for cost estimation, such as the Lang factor method, and provided advice on the application of these methods, specifically the uncertainty in different methodologies
+
+* Document Summarisation: Summarised and synthesised key points from technical papers, reports, and other documents related to the project. For example, uploaded sections of text from a journal article and asked it to summarise/what the key points were.
+
+* Ideation: Asked it what factors I need to consider in financial, environment and social feasibility and then used these points to direct research and also structure the write up.
+
+* I also used ChatGPT to provide me these above dot points: I asked it in what ways Iâ€™ve used it over the last four weeks.","* VB code: explained the macro I wanted to create, what inputs it would require to give specific outputs, also uploaded a screenshot of how I had my spreadsheet set up and got chatGPT to write a code for me. I then debugged it using chatGPT, and before running it in VB for the first time i uploaded the code and asked if it would work, to save debugging VB which seemed more complex to me given no VB experience.
+
+* brain-dumped all of my ideas i wanted to include in a paragraph and asked chatgpt to write it up cohesively
+
+* specifically for executive summary i asked chatGPT to write it professionally and really emphasise what an efficient and optimised process it was
+
+* uploaded a screenshot of a series of calculations undertaken in excel and asked it to write it up/format the calculations into a table.
+
+* asked it to make paragraphs more cohesive and concise
+
+* asked it to tell me the names of suppliers/vendors of pieces of kit so i could look at their websites to get the data I needed 
+
+* general questions about concepts and advantages/disadvantages of certain processes (e.g. how does cooling water perform better than seawater as a utility) so I could then be more specific in my research.","mainly paraphrasing, writing my words concisely, and fluently. 
+
+ideation
+
+cross checking general design first principles thinking
+
+generating templates for spec sheets
+
+generating templates for executive summary, conclusion, and giving ideas on what to include
+
+doing ideal gas law calculations and conversions between units for me"
+46,"* ideation/preliminary research
+
+* pulling information from papers by creating a RAG bot
+
+* generating a logo
+
+* writing VBA code
+
+* generating a draft of an executive summary for our report 
+
+* shortening some sections of text","* very preliminary ideation
+
+* small sections of text generation for sections that required little technical knowledge","* some very small text generation for simple, mostly non-technical, passages of writing
+
+* advice on how to do certain things using excel
+
+* Getting a general understanding or first impression of a topic"
+47,,"Provide ideas and reference values, such as the area of â€‹â€‹the evaporation pond","When selecting deox, provide ideas and alternative materials
+
+Provides a framework for exclusive summary
+
+Modify the format of reference list"

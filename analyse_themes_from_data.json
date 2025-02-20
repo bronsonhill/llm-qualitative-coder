@@ -1,6 +1,6 @@
 {
     "name": "analyse_themes_from_data",
-    "description": "Takes a list of well defined themes present in givendata and analyses the data according to the themes",
+    "description": "Takes a list of well defined themes present in given data and analyses the data according to the themes",
     "strict": true,
     "parameters": {
       "type": "object",
