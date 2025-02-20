@@ -2,10 +2,18 @@ import json
 import pandas as pd
 import yfinance as yf
 import datetime
+import logging
 from dateutil.relativedelta import relativedelta
 from sqlalchemy.orm import sessionmaker
 from data.db import engine
 from data.models.Thesis import Thesis
+
+# Configure logging
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s - %(levelname)s - %(message)s'
+)
+logger = logging.getLogger(__name__)
 
 def get_yahoo_finance_data(ticker: str, date_str: str):
     """
@@ -87,40 +95,69 @@ def ingest_yahoo_finance_data(batch_size=100):
     # Create a session
     Session = sessionmaker(bind=engine)
     session = Session()
+    processed_count = 0
+    error_count = 0
 
     try:
+        logger.info("Starting Yahoo Finance data ingestion...")
+        
+        # First, count total records that need processing
+        total_records = session.query(Thesis).filter(
+            (Thesis.daily_price.is_(None)) | (Thesis.daily_price == '\"[]\"'),
+            ~(Thesis.ticker.like('PRIVATE'))
+        ).count()
+        
+        logger.info(f"Found {total_records} records to process")
+        
+        if total_records == 0:
+            logger.info("No records found that need updating. All records either have data or are marked as UNKNOWN/PRIVATE.")
+            return
+
         while True:
-            # Query a batch of records with null finance data fields
+            # Query a batch of records with either NULL or empty array daily_price
             theses = session.query(Thesis).filter(
-                Thesis.daily_price.is_(None)
+                (Thesis.daily_price.is_(None)) | (Thesis.daily_price == '\"[]\"'),
+                ~(Thesis.ticker.like('%UNKNOWN%')),
+                ~(Thesis.ticker.like('PRIVATE'))
             ).limit(batch_size).all()
             
             if not theses:
-                break  # Exit loop if no more records to process
+                break
 
+            logger.info(f"Processing batch of {len(theses)} records...")
+            
             for thesis in theses:
+                logger.debug(f"Ticker: {thesis.ticker}, Daily Price: {thesis.daily_price}")
                 try:
                     prices_df, dividends_df, profile = get_yahoo_finance_data(thesis.ticker, thesis.date.strftime("%Y-%m-%d"))
-                    print(f"Updating Yahoo Finance data for: {thesis.ticker}")
-                    # Example of manually serializing JSON data
+                    logger.info(f"Updating Yahoo Finance data for: {thesis.ticker}")
+                    
                     thesis.profile = json.dumps(profile)
                     thesis.daily_price = json.dumps(format_prices_df(prices_df))
                     thesis.dividends = json.dumps(format_dividends_df(dividends_df))
 
                     session.commit()
-                    print(f"Updated Yahoo Finance data for: {thesis.ticker}")
+                    processed_count += 1
+                    logger.info(f"Successfully updated Yahoo Finance data for: {thesis.ticker}")
                 except Exception as e:
+                    error_count += 1
                     error_message = str(e)
                     if 'possibly delisted; no timezone found' in error_message:
-                        print(f"Error updating Yahoo Finance data for {thesis.ticker}: {e}")
+                        logger.warning(f"Ticker {thesis.ticker} possibly delisted: {e}")
                         thesis.profile = json.dumps({})
                         thesis.daily_price = json.dumps(['possibly delisted; no timezone found'])
                         thesis.dividends = json.dumps([])
                         session.commit()
                     else:
-                        print(f"Error updating Yahoo Finance data for {thesis.ticker}: {e}")
+                        logger.error(f"Error updating Yahoo Finance data for {thesis.ticker}: {e}")
                         session.rollback()
+
+            logger.info(f"Progress: {processed_count}/{total_records} records processed ({error_count} errors)")
+    
     finally:
         session.close()
+        logger.info(f"Finished processing. Total records: {processed_count}, Errors: {error_count}")
 
-ingest_yahoo_finance_data()
+if __name__ == "__main__":
+    ingest_yahoo_finance_data()
+

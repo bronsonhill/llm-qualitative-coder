@@ -48,16 +48,26 @@ def ingest_baseline_data(ticker: str):
         prices_df = get_daily_price_data(ticker)
         daily_performance = format_prices_df(prices_df)
         start_date = prices_df.index.min().date()  # Fix: Convert to Python date object
-        
-        baseline = Baseline(
-            ticker=ticker,
-            daily_performance=daily_performance,
-            start_date=start_date
-        )
-        
-        session.add(baseline)
+
+        # Check for existing record
+        existing_baseline = session.query(Baseline).filter_by(ticker=ticker).first()
+        if existing_baseline:
+            # Update existing record
+            existing_baseline.daily_performance = daily_performance
+            existing_baseline.start_date = start_date
+            existing_baseline.created_at = datetime.datetime.now(datetime.timezone.utc)
+            print(f"Baseline data updated for ticker: {ticker}")
+        else:
+            # Create new record
+            baseline = Baseline(
+                ticker=ticker,
+                daily_performance=daily_performance,
+                start_date=start_date
+            )
+            session.add(baseline)
+            print(f"Baseline data ingested for ticker: {ticker}")
+
         session.commit()
-        print(f"Baseline data ingested for ticker: {ticker}")
     except Exception as e:
         print(f"Error ingesting baseline data for {ticker}: {e}")
         session.rollback()

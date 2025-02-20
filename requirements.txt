@@ -4,4 +4,4 @@ urllib3
 selenium
 sqlalchemy
 alembic
-json
+tenacity>=8.2.3  # For retry logic with backoff
