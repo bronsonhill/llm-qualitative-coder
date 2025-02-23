@@ -1,0 +1,11 @@
+date,author,old_ticker,new_ticker,company_name,reasoning,processed_at
+2024-10-18,glassonion,THAMES,PRIVATE,Thames Water Utilities Ltd,None of the tickers match with 'Thames Water Utilities Ltd' or 'THAMES'. The company may be privatised.,2025-02-07 13:33:48.257704
+2024-10-17,churchill,TEP,TEP.PA,TELEPERFORMANCE,"TEP.PA is chosen because it matches the company name 'Teleperformance' and ticker 'TEP', and 'PAR' (Euronext Paris) is the largest exchange among the options.",2025-02-07 13:33:48.257704
+2021-10-18,erst1071,FKRFT,NO0010815673.SG,Fjordkraft,"This is the only available ticker symbol associated with 'Fjordkraft'. Despite it not exactly matching the original ticker 'FKRFT', it represents the company on the 'STU' exchange, which is the largest available option.",2025-02-07 13:33:48.257704
+2021-10-16,googie974,LGL.WS,LGL,LGL GROUP INC,"Although there are three options available - '51L.F', 'LGL' and 'LGL-WT', the ticker 'LGL' on the 'ASE' exchange is selected because it matches more closely with the given ticker 'LGL.WS' without any additional suffixes. Furthermore, 'ASE' is larger than 'FRA' exchange.",2025-02-07 13:33:48.257704
+2021-10-16,vfm343,UJJIVAN,UJJIVANSFB.NS,Ujjivan Financial Services ltd,"While 'Ujjivan Small Finance Bank Limited' seems to be a division or subsidiary of 'Ujjivan Financial Services ltd', it looks like the closest match we have. I have chosen the ticker 'UJJIVANSFB.NS' because NSI (National Stock Exchange of India) is the largest exchange.",2025-02-07 13:33:48.257704
+2021-10-15,unlatchmergers,DCT,DCT_UNKNOWN,DUCK CREEK TECHNOL INC,There are no ticker matches for the company 'DUCK CREEK TECHNOL INC' in the provided results.,2025-02-07 13:33:48.257704
+2021-10-15,Leo11,FLOW,FLOW,Flow Token,"The ticker 'FLOW' directly matches the company name 'Flow Token'. Even though it does not contain the exchange's name, it's the only symbol that reflects the company's name exactly.",2025-02-07 13:33:48.257704
+2021-09-25,cosecant95,LFG,LFG_UNKNOWN,ARCHAEA ENERGY INC,"No matching results were provided, therefore 'LFG_UNKNOWN' was selected.",2025-02-07 13:33:48.257704
+2021-09-25,coffee1029,ZOT,ZOT_UNKNOWN,Zardoya Otis,No matching results were found.,2025-02-07 13:33:48.257704
+2021-09-24,bradfordst,ACY,ACY_UNKNOWN,AEROCENTURY CORP,No data results were provided.,2025-02-07 13:33:48.257704

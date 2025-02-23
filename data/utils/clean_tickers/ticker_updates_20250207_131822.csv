@@ -1,0 +1,4 @@
+date,author,old_ticker,new_ticker,company_name,reasoning,processed_at
+2024-10-18,glassonion,THAMES,PRIVATE,Thames Water Utilities Ltd,Neither of the provided tickers align with the name 'Thames Water Utilities Ltd' nor code 'THAMES'. It seems this company may have been privatised.,2025-02-07 13:18:09.526706
+2024-10-17,churchill,TEP,TEP.PA,TELEPERFORMANCE,"The company 'TELEPERFORMANCE' matches well with the name 'Teleperformance SE', and the ticker 'TEP' matches with 'TEP.PA'. Among the results, 'PAR' appears to be the largest exchange.",2025-02-07 13:18:09.526706
+2021-10-18,erst1071,FKRFT,NO0010815673.SG,Fjordkraft,The ticker symbol 'NO0010815673.SG' is the only option provided and it is traded on the STU which is the largest exchange in the results.,2025-02-07 13:18:09.526706
