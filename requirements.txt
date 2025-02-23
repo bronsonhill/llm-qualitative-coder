@@ -1,14 +1,21 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 streamlit
 pandas
 openai
 dotenv
 =======
+=======
+>>>>>>> 7e861f625fcc8889151e0dfa942c61c2dc82d06f
 yfinance
 requests
 urllib3
 selenium
 sqlalchemy
 alembic
+<<<<<<< HEAD
+json
+>>>>>>> 7e861f625fcc8889151e0dfa942c61c2dc82d06f
+=======
 json
 >>>>>>> 7e861f625fcc8889151e0dfa942c61c2dc82d06f
