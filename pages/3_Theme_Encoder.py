@@ -55,8 +55,8 @@ def get_themes_for_text(
     # so GPT knows what to look for
     theme_lines = []
     for _, row in themebook.iterrows():
-        theme_label = str(row["Theme"])
-        theme_def = str(row["Definition"])
+        theme_label = str(row["theme"])
+        theme_def = str(row["definition"])
         theme_lines.append(f"- {theme_label}: {theme_def}")
     themes_str = "\n".join(theme_lines)
 
@@ -126,7 +126,7 @@ def theme_code_entire_dataframe(
     coded_df = df.copy()
 
     # Get the unique themes from the themebook
-    theme_labels = themebook["Theme"].tolist()
+    theme_labels = themebook["theme"].tolist()
 
     # Pre-create columns for each theme + justification
     # so we have columns to store the 0/1 values and short text
